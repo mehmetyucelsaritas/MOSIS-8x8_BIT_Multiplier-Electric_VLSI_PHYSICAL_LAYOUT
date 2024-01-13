@@ -1,0 +1,30 @@
+Circuit: *** SPICE deck for cell XOR_GATE{lay} from library MOSIS_SUBM_PADS_C5
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Error on line 29 : vdd vdd 0 0 5
+	 Unknown parameter "5"
+.dc: Increment so large that there's only one step.
+.dc: Increment so large that there's only one step.
+.dc: Increment so large that there's only one step.
+.step vb=5 vdd=5
+
+Date: Tue Dec 12 18:19:25 2023
+Total elapsed time: 0.094 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 20
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 12
+fillins = 2
+solver = Normal
+Matrix Compiler1: 1012 bytes object code size
+Matrix Compiler2: 1.30 KB object code size

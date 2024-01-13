@@ -1,0 +1,19 @@
+*** SPICE deck for cell NMOS{lay} from library MOSIS_SUBM_PADS_C5
+*** Created on Sal Ara 12, 2023 14:55:06
+*** Last revised on Sal Ara 12, 2023 14:57:03
+*** Written on Sal Ara 12, 2023 14:57:09 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include C:\Users\mehme\OneDrive\tsmc018.txt
+*** WARNING: no ground connection for N-transistor wells in cell 'NMOS{lay}'
+
+*** TOP LEVEL CELL: NMOS{lay}
+Mnmos@0 d g s gnd N L=0.6U W=0.9U AS=3.87P AD=3.87P PS=9.6U PD=9.6U
+
+* Spice Code nodes in cell cell 'NMOS{lay}'
+vd d 0 DC 0
+vg g 0 DC 0
+vs s 0 DC 0
+.dc vd 0 5 vg 0 5 0.5
+.END

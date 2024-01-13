@@ -1,0 +1,29 @@
+*** SPICE deck for cell AND_GATE{lay} from library MOSIS_SUBM_PADS_C5
+*** Created on Sal Ara 12, 2023 15:04:46
+*** Last revised on Sal Ara 12, 2023 18:05:11
+*** Written on Sal Ara 12, 2023 18:05:22 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include C:\Users\mehme\OneDrive\tsmc018.txt
+
+*** SUBCIRCUIT MOSIS_SUBM_PADS_C5__INVERTER FROM CELL INVERTER{lay}
+.SUBCKT MOSIS_SUBM_PADS_C5__INVERTER a gnd out vdd
+Mnmos@0 gnd a out gnd N L=0.6U W=0.9U AS=5.265P AD=2.52P PS=13.2U PD=6.6U
+Mpmos@0 out a vdd vdd P L=0.6U W=0.9U AS=2.52P AD=5.265P PS=6.6U PD=13.2U
+.ENDS MOSIS_SUBM_PADS_C5__INVERTER
+
+*** TOP LEVEL CELL: AND_GATE{lay}
+XINVERTER@1 net@2 gnd out vdd MOSIS_SUBM_PADS_C5__INVERTER
+Mnmos@2 net@0 b gnd gnd N L=0.6U W=0.9U AS=4.77P AD=0.742P PS=12.6U PD=2.55U
+Mnmos@3 net@2 a net@0 gnd N L=0.6U W=0.9U AS=0.742P AD=3.735P PS=2.55U PD=9.3U
+Mpmos@0 vdd b net@2 vdd P L=0.6U W=0.9U AS=3.735P AD=1.395P PS=9.3U PD=3.6U
+Mpmos@1 net@2 a vdd vdd P L=0.6U W=0.9U AS=1.395P AD=3.735P PS=3.6U PD=9.3U
+
+* Spice Code nodes in cell cell 'AND_GATE{lay}'
+vdd vdd 0 dc 5
+vgnd gnd 0 dc 0
+va a 0 dc 0
+vb b 0 dc 0
+.dc va 5 5 5 vb 5 5 5 vdd 5 5 5 
+.END
